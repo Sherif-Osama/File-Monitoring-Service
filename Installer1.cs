@@ -16,6 +16,7 @@ namespace File_Monitoring
                 ServiceName = "FileMonitoringService",
                 StartType = ServiceStartMode.Automatic,
                 DisplayName = "File Monitoring Service",
+                ServicesDependedOn = new string[] { "RpcSs", "EventLog", "LanmanWorkstation" } // Dependencies
             };
 
             ServiceProcessInstaller ServiceProcessInstaller = new ServiceProcessInstaller
